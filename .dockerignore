@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env
+*.db
+*.db-wal
+*.db-shm
+node_modules
+docker-compose*.yml
+tests
+plan.md

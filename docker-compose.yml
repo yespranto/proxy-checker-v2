@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    ports: ["8080:80"]
+    environment:
+      APP_ENV: development
+      DB_PATH: /data/app.db
+      SECRET_KEY: change-me-dev-only-please-set-32bytes
+      ADMIN_USER: admin
+      ADMIN_PASSWORD: change-me-dev-only
+      ECHO_TOKEN: change-me-echo-token
+      ECHO_URL: http://127.0.0.1/echo.php
+      DAILY_LIMIT: "500"
+      WORKER_ENABLED: "1"
+      CHECK_CONCURRENCY: "40"
+      CHECK_TIMEOUT: "12"
+      CHECK_RETRIES: "1"
+    volumes:
+      - proxycheck-data:/data
+volumes:
+  proxycheck-data:

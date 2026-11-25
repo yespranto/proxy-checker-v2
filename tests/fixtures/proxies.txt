@@ -1,0 +1,12 @@
+# Test fixtures: valid, dead, malformed, private/loopback, IPv6, password with @
+192.0.2.1:3128
+socks5://user:p@ssword@198.51.100.10:1080
+203.0.113.5:8080:alice:s3cr3t:extra
+[2001:db8::1]:8080 http
+127.0.0.1:8080
+169.254.169.254:80
+[::1]:8080
+malformed-no-port
+1.2.3.4:99999
+1.2.3.4:8080 badtype
+ftp://1.2.3.4:21
